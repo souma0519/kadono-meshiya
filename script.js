@@ -125,3 +125,23 @@ if (heroPhoto && !reduceMotion) {
     });
   }, { passive: true });
 }
+
+// 起動時オープニング
+const opening = document.querySelector("#opening");
+const openingSkip = document.querySelector("#openingSkip");
+const finishOpening = () => {
+  if (!opening || opening.classList.contains("is-closing")) return;
+  opening.classList.add("is-closing");
+  window.setTimeout(() => {
+    opening.classList.add("is-hidden");
+    document.body.classList.add("opening-finished");
+  }, 900);
+};
+if (opening) {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    opening.classList.add("is-hidden");
+  } else {
+    window.setTimeout(finishOpening, 3200);
+    openingSkip?.addEventListener("click", finishOpening);
+  }
+}

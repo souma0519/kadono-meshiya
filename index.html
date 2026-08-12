@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="東京都足立区・足立市場内の「かどのめし屋 海鮮食堂 足立市場店」。市場ならではの新鮮な魚介を、丼・定食・八戸ラーメンで気軽に楽しめます。" />
+    <meta name="theme-color" content="#073a5c" />
+    <meta property="og:title" content="かどのめし屋 海鮮食堂 足立市場店" />
+    <meta property="og:description" content="市場の新鮮さを、食卓へ。足立市場内の海鮮食堂。" />
+    <meta property="og:type" content="website" />
+    <!-- 公開時に絶対URLへ変更: <meta property="og:image" content="https://example.com/images/ogp.jpg" /> -->
+    <title>かどのめし屋 海鮮食堂 足立市場店 | 足立市場の海鮮食堂</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="photos.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">本文へ移動</a>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="かどのめし屋 トップへ"><span class="brand-mark" aria-hidden="true">魚</span><span>かどのめし屋<small>海鮮食堂 足立市場店</small></span></a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">メニューを開く</span><i></i><i></i><i></i></button>
+        <nav id="site-nav" class="site-nav" aria-label="メインメニュー">
+          <a href="#about">お店について</a><a href="#menu">お品書き</a><a href="#information">店舗情報</a><a href="#access">アクセス</a><a class="nav-phone" href="#contact">お問い合わせ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-photo"><img src="images/photos/storefront.png" alt="かどのめし屋 海鮮食堂 足立市場店の店頭" /></div>
+        <div class="container hero-content">
+          <p class="kicker">ADACHI FISH MARKET · TOKYO</p>
+          <p class="hero-lead">市場の新鮮さを、食卓へ。</p>
+          <h1 id="hero-title">かどのめし屋<small>海鮮食堂 足立市場店</small></h1>
+          <p class="hero-copy">足立市場の活気とともに。新鮮な魚介を使った丼や定食、八戸ラーメンを、気軽な食堂スタイルでどうぞ。</p>
+          <div class="hero-actions"><a class="button button-primary" href="#menu">お品書きを見る <span>→</span></a><a class="button button-ghost" href="tel:0338825811">電話する</a></div>
+        </div>
+        <div class="hero-facts" id="heroFacts" aria-label="店舗の特徴"></div>
+      </section>
+
+      <section class="intro section" id="about" aria-labelledby="about-title">
+        <div class="container intro-grid">
+          <div class="intro-visual"><img src="images/market-table.svg" alt="市場の食堂をイメージしたイラスト" /></div>
+          <div class="intro-copy reveal">
+            <p class="kicker blue">ABOUT US</p><h2 id="about-title">市場のそばで、<br />魚をもっと身近に。</h2>
+            <p>東京都中央卸売市場・足立市場の中にある海鮮食堂です。刺身、海鮮丼、焼き魚、天ぷらなど、魚介を中心とした料理をご用意。市場らしい活気のなか、朝からおいしいひとときをお楽しみください。</p>
+            <p>青森県八戸のご当地ラーメン「八戸ラーメン」も味わえます。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu-section section" id="menu" aria-labelledby="menu-title">
+        <div class="container"><div class="section-heading"><div><p class="kicker blue">RECOMMEND</p><h2 id="menu-title">おすすめ・お品書き</h2></div><p>市場の恵みを、今日の一膳に。</p></div><div class="menu-grid" id="menuGrid"></div><p class="notice">※ 掲載の内容・価格は変更される場合があります。最新情報は店舗へご確認ください。</p></div>
+      </section>
+
+      <section class="gallery section" aria-labelledby="gallery-title">
+        <div class="container"><div class="section-heading"><div><p class="kicker blue">GALLERY</p><h2 id="gallery-title">料理のひとこま</h2></div><p>写真はクリックで拡大できます。</p></div><div class="photo-grid" id="photoGrid"></div></div>
+      </section>
+
+      <section class="info-section section" id="information" aria-labelledby="info-title">
+        <div class="container"><div class="section-heading light"><div><p class="kicker">INFORMATION</p><h2 id="info-title">店舗情報</h2></div><p>ご来店前に、営業時間をご確認ください。</p></div><div class="info-grid" id="infoGrid"></div><p class="info-note">営業時間・定休日などは変更となる場合があります。最新情報は店舗へお電話でご確認ください。</p><div class="usage-heading"><p class="kicker">FOR YOUR VISIT</p><h3>ご利用案内</h3></div><div class="usage-grid" id="usageGrid"></div><p class="info-note" id="marketNote"></p></div>
+      </section>
+
+      <section class="access section" id="access" aria-labelledby="access-title">
+        <div class="container access-grid"><div class="access-copy"><p class="kicker blue">ACCESS</p><h2 id="access-title">足立市場内に<br />ございます。</h2><ol><li><b>京成線「千住大橋駅」</b>から徒歩約5分。</li><li>足立市場の敷地内へお進みください。</li><li>市場内の食堂として、お気軽にお立ち寄りいただけます。</li></ol><a id="mapLink" class="text-link" href="#map-area">地図を開く <span>→</span></a></div><div id="map-area" class="map-frame"><div class="map-placeholder"><span aria-hidden="true">⌖</span><strong>Google Maps</strong><p>地図の埋め込み位置</p></div></div></div>
+      </section>
+
+      <section class="contact" id="contact"><div class="container contact-inner"><div><p class="kicker">CONTACT</p><h2>お問い合わせ・<br class="mobile-only" />お電話でのご確認</h2><p>営業時間や当日の状況は、お電話でお問い合わせください。</p><div class="social-links" id="socialLinks" aria-label="公式アカウント"></div></div><a class="phone-link" href="tel:0338825811" aria-label="03-3882-5811 に電話する"><small>電話番号</small><span>03-3882-5811</span><em>タップして電話する</em></a></div></section>
+    </main>
+    <footer class="site-footer"><div class="container"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">魚</span><span>かどのめし屋<small>海鮮食堂 足立市場店</small></span></a><p>〒120-0038 東京都足立区千住橋戸町50 足立市場内</p><p>© <span id="year"></span> かどのめし屋 海鮮食堂 足立市場店</p></div></footer>
+    <dialog class="lightbox" id="lightbox"><button type="button" class="lightbox-close" aria-label="写真を閉じる">×</button><img id="lightboxImage" alt="" /></dialog>
+    <script src="script.js"></script>
+  </body>
+</html>

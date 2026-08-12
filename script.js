@@ -96,3 +96,32 @@ if ("IntersectionObserver" in window) {
 } else {
   revealItems.forEach(item => item.classList.add("is-visible"));
 }
+
+// スクロール連動の強化演出
+const scrollTargets = document.querySelectorAll(".section, .hero-facts, .menu-card, .photo-card, .info-card, .usage-card, .access-copy, .map-frame, .contact-inner");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (!reduceMotion && "IntersectionObserver" in window) {
+  const scrollObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("scroll-visible");
+      scrollObserver.unobserve(entry.target);
+    }
+  }), { threshold: .12, rootMargin: "0px 0px -8% 0px" });
+  scrollTargets.forEach(target => {
+    target.classList.add("scroll-reveal");
+    scrollObserver.observe(target);
+  });
+} else {
+  scrollTargets.forEach(target => target.classList.add("scroll-visible"));
+}
+const heroPhoto = document.querySelector(".hero-photo");
+let parallaxFrame = null;
+if (heroPhoto && !reduceMotion) {
+  window.addEventListener("scroll", () => {
+    if (parallaxFrame) return;
+    parallaxFrame = requestAnimationFrame(() => {
+      heroPhoto.style.setProperty("--parallax-y", `${Math.min(window.scrollY * 0.12, 90)}px`);
+      parallaxFrame = null;
+    });
+  }, { passive: true });
+}

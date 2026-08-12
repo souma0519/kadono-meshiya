@@ -84,5 +84,15 @@ const menuButton = document.querySelector(".menu-button");
 const nav = document.querySelector("#site-nav");
 menuButton.addEventListener("click", () => { const open = nav.classList.toggle("is-open"); menuButton.setAttribute("aria-expanded", open); });
 nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => { nav.classList.remove("is-open"); menuButton.setAttribute("aria-expanded", "false"); }));
-const reveal = document.querySelector(".reveal");
-if (reveal && "IntersectionObserver" in window) new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add("is-visible"); } }), { threshold: .15 }).observe(reveal); else if (reveal) reveal.classList.add("is-visible");
+const revealItems = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-visible");
+      revealObserver.unobserve(entry.target);
+    }
+  }), { threshold: .15 });
+  revealItems.forEach(item => revealObserver.observe(item));
+} else {
+  revealItems.forEach(item => item.classList.add("is-visible"));
+}

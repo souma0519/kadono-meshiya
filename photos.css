@@ -15,3 +15,22 @@
 .lightbox-close{position:fixed;top:18px;right:22px;width:42px;height:42px;border:0;border-radius:50%;background:#fff;color:#b5122b;font-size:30px;line-height:1;cursor:pointer}
 @media(max-width:800px){.photo-grid{grid-template-columns:repeat(3,1fr)}.hero-photo img{object-position:center top}.map-frame iframe{height:254px}.usage-grid{grid-template-columns:repeat(2,1fr)}.usage-card{min-height:112px}}
 @media(max-width:390px){.photo-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ブランド演出: 控えめな動きと赤いアクセント */
+@keyframes heroKenburns{0%{transform:scale(1)}100%{transform:scale(1.06)}}
+@keyframes softPulse{0%,100%{box-shadow:0 0 0 0 rgba(213,31,63,0)}50%{box-shadow:0 0 0 7px rgba(213,31,63,.14)}}
+@keyframes cardRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.hero-photo img{animation:heroKenburns 18s ease-in-out infinite alternate;transform-origin:center}
+.brand-mark{animation:softPulse 3.8s ease-in-out infinite;transition:transform .25s ease,box-shadow .25s ease}
+.brand:hover .brand-mark{transform:scale(1.08) rotate(-3deg);box-shadow:0 8px 18px rgba(181,18,43,.28)}
+.button,.phone-link,.nav-phone{transition:transform .25s ease,box-shadow .25s ease,background-color .25s ease}
+.button:hover,.button:focus-visible,.phone-link:hover,.phone-link:focus-visible{transform:translateY(-3px);box-shadow:0 10px 22px rgba(181,18,43,.2)}
+.button-primary:hover,.button-primary:focus-visible{background:#ffdfe5}
+.photo-card{position:relative;box-shadow:0 5px 14px rgba(76,8,22,.08);transition:transform .35s ease,box-shadow .35s ease,background-color .35s ease}
+.photo-card:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(213,31,63,.22),transparent 45%);opacity:0;transition:opacity .35s ease;pointer-events:none}
+.photo-card:hover,.photo-card:focus-visible{transform:translateY(-5px);box-shadow:0 14px 28px rgba(181,18,43,.22)}
+.photo-card:hover:after,.photo-card:focus-visible:after{opacity:1}
+.photo-card img{transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .35s ease}
+.photo-card:hover img,.photo-card:focus-visible img{transform:scale(1.08);filter:saturate(1.08)}
+.reveal{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.hero-photo img{transform:none}.photo-card{transform:none!important}}

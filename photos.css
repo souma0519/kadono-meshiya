@@ -90,3 +90,9 @@
 /* オープニング中は背景ページのスクロールを固定 */
 html:has(body.opening-active),body.opening-active{overflow:hidden;height:100%;overscroll-behavior:none}
 body.opening-active{touch-action:none}
+
+/* スマホ用オープニングの全面固定・可読性調整 */
+.opening{top:0;right:0;bottom:0;left:0;width:100vw;min-width:100vw;height:100dvh;min-height:100dvh;padding:24px;box-sizing:border-box;background-color:#8a1026}
+.opening> *:not(.opening-scanline){position:relative;z-index:2;max-width:100%}
+.opening-kicker,.opening-title,.opening-subtitle{max-width:calc(100vw - 48px);overflow-wrap:anywhere}
+@media(max-width:600px){.opening{padding:20px 16px}.opening:before{width:145vw;height:145vw}.opening:after{width:195vw;height:195vw}.opening-mark{width:min(42vw,150px);min-width:96px}.opening-kicker{margin-top:22px;font-size:9px;letter-spacing:.16em;white-space:nowrap}.opening-title{font-size:clamp(30px,10vw,54px);letter-spacing:.12em;white-space:nowrap}.opening-subtitle{margin-top:10px;font-size:11px;letter-spacing:.16em;white-space:nowrap}.opening-rule{width:min(290px,80vw)}.opening-skip{right:16px;bottom:16px;padding:8px 10px;font-size:9px}}

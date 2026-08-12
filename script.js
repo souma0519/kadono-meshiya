@@ -35,16 +35,16 @@ const storeData = {
     ["土曜日限定", "やっちゃば御膳"]
   ],
   photos: [
-    ["images/photos/hachinohe-ramen-1.png", "八戸ラーメン"],
-    ["images/photos/tuna-bowl-1.png", "まぐろを使った海鮮丼"],
-    ["images/photos/grilled-fish-set.png", "焼き魚の定食"],
-    ["images/photos/hachinohe-ramen-2.png", "八戸ラーメンと海鮮丼"],
-    ["images/photos/hachinohe-ramen-noodles.png", "八戸ラーメンの麺"],
-    ["images/photos/sashimi-tempura-set.png", "刺身と天ぷらの定食"],
-    ["images/photos/sashimi.png", "刺身の盛り合わせ"],
-    ["images/photos/tuna-bowl-2.png", "ネギトロ丼"],
-    ["images/photos/hachinohe-ramen-3.png", "八戸ラーメン"],
-    ["images/photos/hachinohe-ramen-4.png", "八戸ラーメン"]
+    ["images/photos/hachinohe-ramen-1-upscaled.png", "八戸ラーメン"],
+    ["images/photos/tuna-bowl-1-upscaled.png", "まぐろを使った海鮮丼"],
+    ["images/photos/grilled-fish-set-upscaled.png", "焼き魚の定食"],
+    ["images/photos/hachinohe-ramen-2-upscaled.png", "八戸ラーメンと海鮮丼"],
+    ["images/photos/hachinohe-ramen-noodles-upscaled.png", "八戸ラーメンの麺"],
+    ["images/photos/sashimi-tempura-set-upscaled.png", "刺身と天ぷらの定食"],
+    ["images/photos/sashimi-upscaled.png", "刺身の盛り合わせ"],
+    ["images/photos/tuna-bowl-2-upscaled.png", "ネギトロ丼"],
+    ["images/photos/hachinohe-ramen-3-upscaled.png", "八戸ラーメン"],
+    ["images/photos/hachinohe-ramen-4-upscaled.png", "八戸ラーメン"]
   ]
 };
 

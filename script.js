@@ -134,12 +134,14 @@ const finishOpening = () => {
   opening.classList.add("is-closing");
   window.setTimeout(() => {
     opening.classList.add("is-hidden");
+    document.body.classList.remove("opening-active");
     document.body.classList.add("opening-finished");
   }, 900);
 };
 if (opening) {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     opening.classList.add("is-hidden");
+    document.body.classList.remove("opening-active");
   } else {
     window.setTimeout(finishOpening, 3200);
     openingSkip?.addEventListener("click", finishOpening);
